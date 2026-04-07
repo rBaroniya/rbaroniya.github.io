@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupesh Baroniya | PhD Researcher | MHD Flow & Heat Transfer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --text: #202124;
+            --light-text: #5f6368;
+            --border: #dadce0;
+            --bg: #ffffff;
+            --accent: #f1f3f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.75;
+        }
+
+        /* Progress Bar */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 4px;
+            z-index: 1001;
+            background: rgba(26, 115, 232, 0.1);
+        }
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), #34a853);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 16px 5%;
+        }
+
+        .nav {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Main Layout */
+        .main {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 60px 5%;
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 70px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 16px;
+            border: 3px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+        }
+
+        .sidebar .title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--light-text);
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .hero-line {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 28px;
+        }
+
+        .contact a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 15px;
+        }
+
+        .contact a:hover { opacity: 0.8; }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .metric-box {
+            background: var(--accent);
+            padding: 16px 10px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .metric-box strong {
+            display: block;
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .metric-box span {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--light-text);
+        }
+
+        /* Content Area */
+        .content {
+            text-align: justify;
+        }
+
+        .content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .content h2 {
+            font-size: 26px;
+            margin: 55px 0 24px;
+            position: relative;
+            padding-bottom: 12px;
+            text-align: left;
+        }
+
+        .content h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), #34a853);
+            border-radius: 3px;
+        }
+
+        /* Publication Cards */
+        .pub {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 18px;
+            transition: all 0.3s;
+        }
+
+        .pub:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .pub-authors {
+            color: var(--primary);
+            font-size: 14.5px;
+            margin-bottom: 8px;
+        }
+
+        .pub-journal {
+            font-size: 14px;
+            color: var(--light-text);
+        }
+
+        .doi {
+            color: #34a853;
+            text-decoration: none;
+        }
+
+        .doi:hover { text-decoration: underline; }
+
+        /* Skill & Interest Tags */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .skill-tag {
+            background: var(--accent);
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 14.5px;
+            color: var(--text);
+            border: 1px solid var(--border);
+            transition: all 0.25s;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Tabs */
+        .pub-tabs {
+            display: flex;
+            gap: 8px;
+            margin: 35px 0 25px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 10px 22px;
+            background: var(--accent);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tab-button.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+    padding: 50px 20px 30px;
+    color: var(--light-text);
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+    margin-top: 80px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 40px 5%;
+            }
+            .sidebar { position: static; }
+            .nav-links { display: none; }
+            .content h1 { font-size: 34px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <div class="nav">
+            <div class="name">Rupesh Baroniya</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#education">Education</a>
+                <a href="#responsibility">Leadership</a>
+                <a href="#service">Professional Service</a>
+                <a href="#skills">Skills</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="your-photo.jpg" alt="Rupesh Baroniya" class="profile-img">
+
+            <div class="title">Rupesh Baroniya</div>
+            <div class="subtitle">PhD Researcher | MHD Flow & Heat Transfer | CFD & Fusion Applications</div>
+
+            <div class="hero-line">
+                Working on magnetohydrodynamic flow and heat transfer for fusion energy systems using CFD and dimensionless modeling.
+            </div>
+
+            <div class="contact">
+                <a href="mailto:rupeshbaroniya19@gmail.com"><i class="fas fa-envelope"></i> rupeshbaroniya19@gmail.com</a>
+                <a href="https://scholar.google.com/citations?user=64YAciYAAAAJ&hl=en" target="_blank"><i class="fab fa-google-scholar"></i> Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-5683-183X" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+                <a href="https://www.linkedin.com/in/rupeshbaroniya" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+
+            <div class="metrics">
+                <div class="metric-box"><strong>7+</strong><span>Papers</span></div>
+                <div class="metric-box"><strong>17+</strong><span>Citations</span></div>
+                <div class="metric-box"><strong>3</strong><span>h-index</span></div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <div id="about">
+                <h1>About</h1>
+                <p>I am a PhD researcher in Mechanical Engineering at Maulana Azad National Institute of Technology Bhopal, India, specializing in magnetohydrodynamic (MHD) flow and heat transfer through numerical simulations and computational fluid dynamics (CFD). My research focuses on dimensionless modeling of MHD flows in complex geometries, including sudden and gradual expansions, square channels under inclined magnetic fields, and liquid metal flows, with direct applications in fusion energy systems and advanced thermal management.</p>
+            </div>
+
+            <div id="research">
+                <h2>Research Interests</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Magnetohydrodynamics</span>
+                    <span class="skill-tag">Computational Fluid Dynamics</span>
+                    <span class="skill-tag">Convective Heat Transfer</span>
+                    <span class="skill-tag">Numerical Simulation Methods</span>
+                    <span class="skill-tag">Fusion Reactor Cooling Systems</span>
+                    <span class="skill-tag">Inclined Magnetic Fields</span>
+                    <span class="skill-tag">Microfluidics</span>
+                    <span class="skill-tag">Liquid Metal Flows</span>
+                    <span class="skill-tag">MHD Flow in Complex Geometries</span>
+                </div>
+
+                <h2>Research Highlights</h2>
+                <ul style="margin-left: 20px; line-height: 1.9; margin-bottom: 40px;">
+                    <li>Developed dimensionless MHD models for sudden and gradual channel expansions</li>
+                    <li>Analyzed effects of Hartmann and Reynolds numbers on pressure drop and velocity profiles</li>
+                    <li>Investigated influence of insulating vs. conducting walls and inclined magnetic fields in square ducts</li>
+                    <li>Focused on liquid metal MHD flows relevant to fusion reactor cooling systems</li>
+                    <li>Applied optimization techniques (e.g., Response Surface Methodology) for enhanced thermal performance</li>
+                </ul>
+            </div>
+
+            <div id="publications">
+                <h2>Publications</h2>
+
+                <div class="pub-tabs">
+                    <button class="tab-button active" onclick="showTab(0)">All</button>
+                    <button class="tab-button" onclick="showTab(1)">Journals</button>
+                    <button class="tab-button" onclick="showTab(2)">Conferences & Book Chapters</button>
+                    <button class="tab-button" onclick="showTab(3)">In Press</button>
+                </div>
+
+                <!-- Tab: All -->
+                <div id="tab-all" class="tab-content active">
+                    <div class="pub">
+                        <div class="pub-title">Optimization of magnetohydrodynamic flow in a sudden expansion channel: Effects of Hartmann and Reynolds number on pressure and velocity dynamics</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">International Communications in Heat and Mass Transfer, 2025 • <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.108746" class="doi" target="_blank">DOI: 10.1016/j.icheatmasstransfer.2025.108746</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical Investigation of Dimensional Effects on Magnetohydrodynamic Flow in Disaligned Channels</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering, 2025 • <a href="https://doi.org/10.1007/S40997-025-00902-1" class="doi" target="_blank">DOI: 10.1007/S40997-025-00902-1</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Influence of insulating and conducting walls on magnetohydrodynamic flow in a suddenly expanded channel: A numerical study</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2024 • <a href="https://doi.org/10.1080/15567036.2024.2433156" class="doi" target="_blank">DOI: 10.1080/15567036.2024.2433156</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Asymmetry Analysis of the MHD Flow in Sudden Expansion</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, N.L. Gajbhiye</div>
+                        <div class="pub-journal">Fluid Mechanics and Fluid Power (Lecture Notes in Mechanical Engineering), 2024 • <a href="https://doi.org/10.1007/978-981-99-5755-2_40" class="doi" target="_blank">DOI: 10.1007/978-981-99-5755-2_40</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical investigation of a liquid metal MHD flow in a gradually expanded microchannel</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Rahul Bisen, Narendra L. Gajbhiye, Rajesh Gupta</div>
+                        <div class="pub-journal">27th National and 5th International ISHMT-ASTFE Heat and Mass Transfer Conference, 2023 • <a href="https://doi.org/10.1615/ihmtc-2023.1620" class="doi" target="_blank">DOI: 10.1615/ihmtc-2023.1620</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Analysis of magnetohydrodynamic flow and heat transfer in liquid metal flow through a square channel under inclined magnetic field</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2026 • <a href="https://doi.org/10.1080/15567036.2026.2642403" class="doi" target="_blank">DOI: 10.1080/15567036.2026.2642403</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">MHD Flow Analysis for Velocity Profile and Pressure Drop in Sudden Expansion Channel</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Book Chapter, 2026 • <a href="https://doi.org/10.1007/978-981-95-1723-7_50" class="doi" target="_blank">DOI: 10.1007/978-981-95-1723-7_50</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Analysis of MHD flow dynamics in a U-bent channel under the influence of different Hartmann and Reynolds numbers</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">ICRAFMN-2025 & ICAMEN-2025, 2025 • In Press</div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical investigation of magnetohydrodynamic flow in a disaligned channel with a transverse magnetic field</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Recent Advancements in Thermo-Fluidic and Energy Engineering, 2026 • In Press</div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical study of wall conductivity effects on magnetohydrodynamic flow in a T-junction channel</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
+                    </div>
+                </div>
+
+                <!-- Journals Tab -->
+                <div id="tab-journals" class="tab-content">
+                    <div class="pub">
+                        <div class="pub-title">Optimization of magnetohydrodynamic flow in a sudden expansion channel: Effects of Hartmann and Reynolds number on pressure and velocity dynamics</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">International Communications in Heat and Mass Transfer, 2025 • <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.108746" class="doi" target="_blank">DOI</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical Investigation of Dimensional Effects on Magnetohydrodynamic Flow in Disaligned Channels</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering, 2025 • <a href="https://doi.org/10.1007/S40997-025-00902-1" class="doi" target="_blank">DOI</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Influence of insulating and conducting walls on magnetohydrodynamic flow in a suddenly expanded channel: A numerical study</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2024 • <a href="https://doi.org/10.1080/15567036.2024.2433156" class="doi" target="_blank">DOI</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Analysis of magnetohydrodynamic flow and heat transfer in liquid metal flow through a square channel under inclined magnetic field</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2026 • <a href="https://doi.org/10.1080/15567036.2026.2642403" class="doi" target="_blank">DOI</a></div>
+                    </div>
+                </div>
+
+                <!-- Conferences Tab -->
+                <div id="tab-conferences" class="tab-content">
+                    <div class="pub">
+                        <div class="pub-title">Asymmetry Analysis of the MHD Flow in Sudden Expansion</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, N.L. Gajbhiye</div>
+                        <div class="pub-journal">Fluid Mechanics and Fluid Power (Lecture Notes in Mechanical Engineering), 2024 • <a href="https://doi.org/10.1007/978-981-99-5755-2_40" class="doi" target="_blank">DOI</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical investigation of a liquid metal MHD flow in a gradually expanded microchannel</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Rahul Bisen, Narendra L. Gajbhiye, Rajesh Gupta</div>
+                        <div class="pub-journal">27th National and 5th International ISHMT-ASTFE Heat and Mass Transfer Conference, 2023 • <a href="https://doi.org/10.1615/ihmtc-2023.1620" class="doi" target="_blank">DOI</a></div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">MHD Flow Analysis for Velocity Profile and Pressure Drop in Sudden Expansion Channel</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Book Chapter, 2026 • <a href="https://doi.org/10.1007/978-981-95-1723-7_50" class="doi" target="_blank">DOI</a></div>
+                    </div>
+                </div>
+
+                <!-- In Press Tab -->
+                <div id="tab-inpress" class="tab-content">
+                    <div class="pub">
+                        <div class="pub-title">Analysis of MHD flow dynamics in a U-bent channel under the influence of different Hartmann and Reynolds numbers</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">ICRAFMN-2025 & ICAMEN-2025, 2025 • In Press</div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical investigation of magnetohydrodynamic flow in a disaligned channel with a transverse magnetic field</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Recent Advancements in Thermo-Fluidic and Energy Engineering, 2026 • In Press</div>
+                    </div>
+                    <div class="pub">
+                        <div class="pub-title">Numerical study of wall conductivity effects on magnetohydrodynamic flow in a T-junction channel</div>
+                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+                        <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="education">
+                <h2>Education</h2>
+                <p><strong>PhD in Mechanical Engineering</strong><br>
+                Maulana Azad National Institute of Technology (MANIT), Bhopal, Madhya Pradesh, India<br>
+                2022 – Present</p>
+            </div>
+
+            <div id="responsibility">
+                <h2>Leadership & Service</h2>
+                <div style="margin-bottom: 30px;">
+                    <p><strong>Group Coordinator – Examination Control Room (ECR)</strong><br>
+                    Department of Mechanical Engineering, MANIT Bhopal<br>
+                    <span style="color:#555;">Ongoing Responsibility</span><br><br>
+                    Lead and coordinate Examination Control Room operations across UG and PG examinations. 
+        Responsible for assigning duties to PhD scholars, supervising control room activities, 
+        and ensuring smooth, fair, and disciplined conduct of examinations. Regularly manage 
+        team coordination, monitor execution of responsibilities and maintain operational efficiency 
+        throughout the examination process.</p>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <p><strong>Workshop Coordinator – CFD (Karyashala)</strong><br>
+                    <a href="https://sites.google.com/view/karyashala/home" target="_blank">Workshop Website</a><br><br>
+                    Coordinated and managed the computational fluid dynamics workshop under the Karyashala initiative. 
+        Designed and developed the official workshop website, and handled participant 
+        coordination, session organization, and technical support throughout the program.</p>
+                </div>
+                <div>
+                    <p><strong>Lecture Delivered – Faculty Development Program (FDP)</strong><br>
+                    Topic: Simulation using ANSYS</p><br>
+Delivered a lecture in a Faculty Development Program focusing on numerical simulation using ANSYS. 
+            Covered fundamental concepts, simulation workflow, and practical implementation for academic and 
+            research applications
+                </div>
+            </div>
+
+            <div id="service">
+                <h2>Professional Service</h2>
+                <div style="margin-bottom: 25px;">
+                    <p><strong>Reviewer</strong> for <strong>International Journal of Heat and Mass Transfer (Elsevier)</strong><br>
+                    Reviewed 4 manuscripts.</p>
+                </div>
+                <div>
+                    <p><strong>Reviewer</strong> for <strong>Transport Phenomena (De Gruyter Brill)</strong><br>
+                    Reviewed 1 manuscript.</p>
+                </div>
+            </div>
+
+            <div id="skills">
+                <h2>Skills</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">ANSYS</span>
+                    <span class="skill-tag">OpenFOAM</span>
+                    <span class="skill-tag">Anupravaha (MHD)</span>
+                    <span class="skill-tag">Finite Volume Method (FVM)</span>
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">Tecplot</span>
+                    <span class="skill-tag">Origin</span>
+                    <span class="skill-tag">Response Surface Methodology (RSM)</span>
+                    <span class="skill-tag">CATIA</span>
+                    <span class="skill-tag">SolidWorks</span>
+                    <span class="skill-tag">Creo</span>
+                    <span class="skill-tag">LaTeX</span>
+                    <span class="skill-tag">HTML & CSS</span>
+                    <span class="skill-tag">Technical Writing</span>
+                </div>
+            </div>
+
+            <div>
+                <h2>Current Research</h2>
+                <p>Currently investigating entropy generation in magnetohydrodynamic (MHD) channel flows to analyze thermodynamic irreversibilities arising from viscous effects. The work incorporates entropy-based analysis using parameters such as the Bejan number to distinguish between heat transfer and fluid friction contributions. The study aims to optimize flow and thermal performance in fusion-relevant channel configurations through a dimensionless framework.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Rupesh Baroniya • PhD Researcher, MANIT Bhopal, India</p>
+    </footer>
+
+    <script>
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        function showTab(n) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            const tabs = ['tab-all', 'tab-journals', 'tab-conferences', 'tab-inpress'];
+            document.getElementById(tabs[n]).classList.add('active');
+            document.querySelectorAll('.tab-button')[n].classList.add('active');
+        }
+    </script>
+</body>
+</html>
