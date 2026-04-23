@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rbaroniya.github.io/sitemap.xml
