@@ -412,7 +412,7 @@
 
             <div class="metrics">
                 <div class="metric-box"><strong>11+</strong><span>Papers</span></div>
-                <div class="metric-box"><strong>21+</strong><span>Citations</span></div>
+                <div class="metric-box"><strong>24+</strong><span>Citations</span></div>
                 <div class="metric-box"><strong>3</strong><span>h-index</span></div>
             </div>
         </aside>
@@ -420,7 +420,7 @@
         <div class="content">
             <div id="about">
                 <h1>About</h1>
-                <p>I am a PhD researcher in Mechanical Engineering at Maulana Azad National Institute of Technology Bhopal, India, specializing in magnetohydrodynamic (MHD) flow, computational fluid dynamics (CFD), and heat transfer. My research focuses on numerical simulation and dimensionless modeling of MHD flows in complex geometries, including sudden and gradual expansions, disaligned channels, and square ducts under inclined magnetic fields. I also work on liquid metal flows with applications in fusion energy systems and advanced cooling technologies. I am particularly interested in applying CFD to broader problems in thermal engineering and energy systems, especially those involving multiphysics interactions and complex flow configurations.</p>
+                <p>PhD researcher in Mechanical Engineering with expertise in computational fluid dynamics (CFD), magnetohydrodynamics (MHD), heat transfer, and multiphysics flow modeling. My doctoral research focuses on high-fidelity numerical simulation of complex flow geometries including sudden expansions, bends, T-junctions, and disaligned channels, with particular emphasis on liquid metal MHD flows and heat transfer for fusion energy applications. Proficient in ANSYS Fluent, OpenFOAM, and finite volume method (FVM)-based solvers. Published 11+ peer-reviewed papers as first and corresponding author in SCIE/Scopus-indexed journals and actively serving as a reviewer for International Journal of Heat and Mass Transfer, Physics of Fluids, and Transport Phenomena.</p>
             </div>
 
             <div id="research">
@@ -439,148 +439,154 @@
 
                 <h2>Research Highlights</h2>
                 <ul style="margin-left: 20px; line-height: 1.9; margin-bottom: 40px;">
-                    <li>Developed dimensionless MHD models for sudden and gradual channel expansions</li>
-                    <li>Analyzed effects of Hartmann and Reynolds numbers on pressure drop and velocity profiles</li>
-                    <li>Investigated influence of insulating vs. conducting walls and inclined magnetic fields in square ducts</li>
-                    <li>Focused on liquid metal MHD flows relevant to fusion reactor cooling systems</li>
-                    <li>Applied optimization techniques (e.g., Response Surface Methodology) for enhanced thermal performance</li>
+                    <li>Developed dimensionless MHD models for sudden and gradual channel expansions, quantifying Hartmann and Reynolds number effects on pressure drop and velocity distributions</li>
+                    <li>Investigated wall conductivity (insulating vs. conducting) and inclined magnetic field effects on MHD flow and heat transfer in square ducts relevant to fusion blanket channel design</li>
+                    <li>Applied Response Surface Methodology (RSM) for optimization of thermal and hydrodynamic performance in MHD heat transfer configurations</li>
+                    <li>Characterized electric current redistribution and Lorentz force localization in expansion geometries relevant to flow control in fusion cooling systems</li>
                 </ul>
             </div>
 
-            <div id="publications">
-                <h2>Publications</h2>
-                
-                <input type="text" id="pubSearch" class="search-bar" placeholder="Search papers by keyword, journal, or co-author...">
+<!-- Publications (Compact Separate List Style) -->
 
-                <div class="pub-tabs">
-                    <button class="tab-button active" onclick="showTab(0)">All</button>
-                    <button class="tab-button" onclick="showTab(1)">Journals</button>
-                    <button class="tab-button" onclick="showTab(2)">Conferences & Book Chapters</button>
-                    <button class="tab-button" onclick="showTab(3)">In Press</button>
-                </div>
+<div id="publications">
+    <h2>Publications</h2>
+    
+    <input type="text" id="pubSearch" class="search-bar" placeholder="Search papers by keyword, journal, or co-author...">
+    
+    <div class="pub-tabs">
+        <button class="tab-button active" onclick="showTab(0)">All</button>
+        <button class="tab-button" onclick="showTab(1)">Journals</button>
+        <button class="tab-button" onclick="showTab(2)">Conferences & Book Chapters</button>
+        <button class="tab-button" onclick="showTab(3)">In Press</button>
+    </div>
 
-                <div id="tab-all" class="tab-content active">
-                    <div class="pub">
-                        <div class="pub-title">Optimization of magnetohydrodynamic flow in a sudden expansion channel: Effects of Hartmann and Reynolds number on pressure and velocity dynamics</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">International Communications in Heat and Mass Transfer, 2025 • <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.108746" class="doi" target="_blank">DOI: 10.1016/j.icheatmasstransfer.2025.108746</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Electric current redistribution and Lorentz force localization in magnetohydrodynamic flow through a sudden expansion</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Journal of Process Mechanical Engineering, 2026 • <a href="https://journals.sagepub.com/doi/full/10.1177/09544089261444779" class="doi" target="_blank">DOI: 10.1177/09544089261444779</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Analysis of magnetohydrodynamic flow and heat transfer in liquid metal flow through a square channel under inclined magnetic field</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
-                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2026 • <a href="https://doi.org/10.1080/15567036.2026.2642403" class="doi" target="_blank">DOI: 10.1080/15567036.2026.2642403</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical Investigation of Dimensional Effects on Magnetohydrodynamic Flow in Disaligned Channels</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering, 2025 • <a href="https://doi.org/10.1007/S40997-025-00902-1" class="doi" target="_blank">DOI: 10.1007/S40997-025-00902-1</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Influence of insulating and conducting walls on magnetohydrodynamic flow in a suddenly expanded channel: A numerical study</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
-                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2024 • <a href="https://doi.org/10.1080/15567036.2024.2433156" class="doi" target="_blank">DOI: 10.1080/15567036.2024.2433156</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Asymmetry Analysis of the MHD Flow in Sudden Expansion</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, N.L. Gajbhiye</div>
-                        <div class="pub-journal">Fluid Mechanics and Fluid Power (Lecture Notes in Mechanical Engineering), 2024 • <a href="https://doi.org/10.1007/978-981-99-5755-2_40" class="doi" target="_blank">DOI: 10.1007/978-981-99-5755-2_40</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical investigation of a liquid metal MHD flow in a gradually expanded microchannel</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Rahul Bisen, Narendra L. Gajbhiye, Rajesh Gupta</div>
-                        <div class="pub-journal">27th National and 5th International ISHMT-ASTFE Heat and Mass Transfer Conference, 2023 • <a href="https://doi.org/10.1615/ihmtc-2023.1620" class="doi" target="_blank">DOI: 10.1615/ihmtc-2023.1620</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">MHD Flow Analysis for Velocity Profile and Pressure Drop in Sudden Expansion Channel</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Book Chapter, 2026 • <a href="https://doi.org/10.1007/978-981-95-1723-7_50" class="doi" target="_blank">DOI: 10.1007/978-981-95-1723-7_50</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Analysis of MHD flow dynamics in a U-bent channel under the influence of different Hartmann and Reynolds numbers</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical investigation of magnetohydrodynamic flow in a disaligned channel with a transverse magnetic field</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Recent Advancements in Thermo-Fluidic and Energy Engineering, 2026 • In Press</div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical study of wall conductivity effects on magnetohydrodynamic flow in a T-junction channel</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
-                    </div>
-                </div>
+    <!-- Tab: All -->
+    <div id="tab-all" class="tab-content active">
+        <div class="pub">
+            <div class="pub-title">Optimization of magnetohydrodynamic flow in a sudden expansion channel: Effects of Hartmann and Reynolds number on pressure and velocity dynamics</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">International Communications in Heat and Mass Transfer, 2025 • <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.108746" class="doi" target="_blank">DOI: 10.1016/j.icheatmasstransfer.2025.108746</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Electric current redistribution and Lorentz force localization in magnetohydrodynamic flow through a sudden expansion</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Journal of Process Mechanical Engineering, 2026 • <a href="https://journals.sagepub.com/doi/full/10.1177/09544089261444779" class="doi" target="_blank">DOI: 10.1177/09544089261444779</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Analysis of magnetohydrodynamic flow and heat transfer in liquid metal flow through a square channel under inclined magnetic field</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+            <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2026 • <a href="https://doi.org/10.1080/15567036.2026.2642403" class="doi" target="_blank">DOI: 10.1080/15567036.2026.2642403</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical Investigation of Dimensional Effects on Magnetohydrodynamic Flow in Disaligned Channels</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering, 2025 • <a href="https://doi.org/10.1007/S40997-025-00902-1" class="doi" target="_blank">DOI: 10.1007/S40997-025-00902-1</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Influence of insulating and conducting walls on magnetohydrodynamic flow in a suddenly expanded channel: A numerical study</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+            <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2024 • <a href="https://doi.org/10.1080/15567036.2024.2433156" class="doi" target="_blank">DOI: 10.1080/15567036.2024.2433156</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Asymmetry Analysis of the MHD Flow in Sudden Expansion</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, N.L. Gajbhiye</div>
+            <div class="pub-journal">Fluid Mechanics and Fluid Power (Lecture Notes in Mechanical Engineering), 2024 • <a href="https://doi.org/10.1007/978-981-99-5755-2_40" class="doi" target="_blank">DOI: 10.1007/978-981-99-5755-2_40</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical investigation of a liquid metal MHD flow in a gradually expanded microchannel</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Rahul Bisen, Narendra L. Gajbhiye, Rajesh Gupta</div>
+            <div class="pub-journal">27th National and 5th International ISHMT-ASTFE Heat and Mass Transfer Conference, 2023 • <a href="https://doi.org/10.1615/ihmtc-2023.1620" class="doi" target="_blank">DOI: 10.1615/ihmtc-2023.1620</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">MHD Flow Analysis for Velocity Profile and Pressure Drop in Sudden Expansion Channel</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Advances in Multidisciplinary Analysis and Optimization 2024 • <a href="https://doi.org/10.1007/978-981-95-1723-7_50" class="doi" target="_blank">DOI: 10.1007/978-981-95-1723-7_50</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical Investigation of Magnetohydrodynamic Flow in a Disaligned Channel with a Transverse Magnetic Field</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Recent Advancements in Thermo-Fluidic and Energy Engineering 2026 • <a href="https://doi.org/10.1007/978-981-95-3698-6_6" class="doi" target="_blank">DOI: 10.1007/978-981-95-3698-6_6</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Analysis of MHD flow dynamics in a U-bent channel under the influence of different Hartmann and Reynolds numbers</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical study of wall conductivity effects on magnetohydrodynamic flow in a T-junction channel</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
+        </div>
+    </div>
 
-                <div id="tab-journals" class="tab-content">
-                    <div class="pub">
-                        <div class="pub-title">Optimization of magnetohydrodynamic flow in a sudden expansion channel: Effects of Hartmann and Reynolds number on pressure and velocity dynamics</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">International Communications in Heat and Mass Transfer, 2025 • <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.108746" class="doi" target="_blank">DOI: 10.1016/j.icheatmasstransfer.2025.108746</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Electric current redistribution and Lorentz force localization in magnetohydrodynamic flow through a sudden expansion</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Journal of Process Mechanical Engineering, 2026 • <a href="https://journals.sagepub.com/doi/full/10.1177/09544089261444779" class="doi" target="_blank">DOI: 10.1177/09544089261444779</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Analysis of magnetohydrodynamic flow and heat transfer in liquid metal flow through a square channel under inclined magnetic field</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
-                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2026 • <a href="https://doi.org/10.1080/15567036.2026.2642403" class="doi" target="_blank">DOI: 10.1080/15567036.2026.2642403</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical Investigation of Dimensional Effects on Magnetohydrodynamic Flow in Disaligned Channels</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering, 2025 • <a href="https://doi.org/10.1007/S40997-025-00902-1" class="doi" target="_blank">DOI: 10.1007/S40997-025-00902-1</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Influence of insulating and conducting walls on magnetohydrodynamic flow in a suddenly expanded channel: A numerical study</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
-                        <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2024 • <a href="https://doi.org/10.1080/15567036.2024.2433156" class="doi" target="_blank">DOI: 10.1080/15567036.2024.2433156</a></div>
-                    </div>
-                </div>
+    <!-- Tab: Journals -->
+    <div id="tab-journals" class="tab-content">
+        <div class="pub">
+            <div class="pub-title">Optimization of magnetohydrodynamic flow in a sudden expansion channel: Effects of Hartmann and Reynolds number on pressure and velocity dynamics</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">International Communications in Heat and Mass Transfer, 2025 • <a href="https://doi.org/10.1016/j.icheatmasstransfer.2025.108746" class="doi" target="_blank">DOI: 10.1016/j.icheatmasstransfer.2025.108746</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Electric current redistribution and Lorentz force localization in magnetohydrodynamic flow through a sudden expansion</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Journal of Process Mechanical Engineering, 2026 • <a href="https://journals.sagepub.com/doi/full/10.1177/09544089261444779" class="doi" target="_blank">DOI: 10.1177/09544089261444779</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Analysis of magnetohydrodynamic flow and heat transfer in liquid metal flow through a square channel under inclined magnetic field</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+            <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2026 • <a href="https://doi.org/10.1080/15567036.2026.2642403" class="doi" target="_blank">DOI: 10.1080/15567036.2026.2642403</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical Investigation of Dimensional Effects on Magnetohydrodynamic Flow in Disaligned Channels</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering, 2025 • <a href="https://doi.org/10.1007/S40997-025-00902-1" class="doi" target="_blank">DOI: 10.1007/S40997-025-00902-1</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Influence of insulating and conducting walls on magnetohydrodynamic flow in a suddenly expanded channel: A numerical study</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, Narendra Gajbhiye</div>
+            <div class="pub-journal">Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, 2024 • <a href="https://doi.org/10.1080/15567036.2024.2433156" class="doi" target="_blank">DOI: 10.1080/15567036.2024.2433156</a></div>
+        </div>
+    </div>
 
-                <div id="tab-conferences" class="tab-content">
-                    <div class="pub">
-                        <div class="pub-title">Asymmetry Analysis of the MHD Flow in Sudden Expansion</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, N.L. Gajbhiye</div>
-                        <div class="pub-journal">Fluid Mechanics and Fluid Power (Lecture Notes in Mechanical Engineering), 2024 • <a href="https://doi.org/10.1007/978-981-99-5755-2_40" class="doi" target="_blank">DOI</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical investigation of a liquid metal MHD flow in a gradually expanded microchannel</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Rahul Bisen, Narendra L. Gajbhiye, Rajesh Gupta</div>
-                        <div class="pub-journal">27th National and 5th International ISHMT-ASTFE Heat and Mass Transfer Conference, 2023 • <a href="https://doi.org/10.1615/ihmtc-2023.1620" class="doi" target="_blank">DOI</a></div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">MHD Flow Analysis for Velocity Profile and Pressure Drop in Sudden Expansion Channel</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Book Chapter, 2026 • <a href="https://doi.org/10.1007/978-981-95-1723-7_50" class="doi" target="_blank">DOI</a></div>
-                    </div>
-                </div>
+    <!-- Tab: Conferences & Book Chapters -->
+    <div id="tab-conferences" class="tab-content">
+        <div class="pub">
+            <div class="pub-title">Asymmetry Analysis of the MHD Flow in Sudden Expansion</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya, N.L. Gajbhiye</div>
+            <div class="pub-journal">Fluid Mechanics and Fluid Power (Lecture Notes in Mechanical Engineering), 2024 • <a href="https://doi.org/10.1007/978-981-99-5755-2_40" class="doi" target="_blank">DOI: 10.1007/978-981-99-5755-2_40</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical investigation of a liquid metal MHD flow in a gradually expanded microchannel</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Rahul Bisen, Narendra L. Gajbhiye, Rajesh Gupta</div>
+            <div class="pub-journal">27th National and 5th International ISHMT-ASTFE Heat and Mass Transfer Conference, 2023 • <a href="https://doi.org/10.1615/ihmtc-2023.1620" class="doi" target="_blank">DOI: 10.1615/ihmtc-2023.1620</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical Investigation of Magnetohydrodynamic Flow in a Disaligned Channel with a Transverse Magnetic Field</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Recent Advancements in Thermo-Fluidic and Energy Engineering 2026 • <a href="https://doi.org/10.1007/978-981-95-3698-6_6" class="doi" target="_blank">DOI: 10.1007/978-981-95-3698-6_6</a></div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">MHD Flow Analysis for Velocity Profile and Pressure Drop in Sudden Expansion Channel</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Advances in Multidisciplinary Analysis and Optimization 2024 • <a href="https://doi.org/10.1007/978-981-95-1723-7_50" class="doi" target="_blank">DOI: 10.1007/978-981-95-1723-7_50</a></div>
+        </div>
+    </div>
 
-                <div id="tab-inpress" class="tab-content">
-                    <div class="pub">
-                        <div class="pub-title">Analysis of MHD flow dynamics in a U-bent channel under the influence of different Hartmann and Reynolds numbers</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical investigation of magnetohydrodynamic flow in a disaligned channel with a transverse magnetic field</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Recent Advancements in Thermo-Fluidic and Energy Engineering, 2026 • In Press</div>
-                    </div>
-                    <div class="pub">
-                        <div class="pub-title">Numerical study of wall conductivity effects on magnetohydrodynamic flow in a T-junction channel</div>
-                        <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
-                        <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
-                    </div>
-                </div>
-            </div>
+    <!-- Tab: In Press -->
+    <div id="tab-inpress" class="tab-content">
+        <div class="pub">
+            <div class="pub-title">Analysis of MHD flow dynamics in a U-bent channel under the influence of different Hartmann and Reynolds numbers</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
+        </div>
+        <div class="pub">
+            <div class="pub-title">Numerical study of wall conductivity effects on magnetohydrodynamic flow in a T-junction channel</div>
+            <div class="pub-authors"><strong>Rupesh Baroniya</strong>, Manoj Arya</div>
+            <div class="pub-journal">Lecture Notes in Physics, 2026 • In Press</div>
+        </div>
+    </div>
+</div>
+
 
 			<!-- Selected Conferences & Presentations Section (Compact Separate List Style) -->
 <div id="conferences">
@@ -601,12 +607,26 @@
     </ul>
 </div>
 			
-            <div id="education">
-                <h2>Education</h2>
-                <p><strong>PhD in Mechanical Engineering</strong><br>
-                Maulana Azad National Institute of Technology (MANIT), Bhopal, Madhya Pradesh, India<br>
-                2022 – Present</p>
-            </div>
+
+<div id="education">
+    <h2>Education</h2>
+
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+        <div>
+            <strong>PhD in Mechanical Engineering</strong><br>
+            Maulana Azad National Institute of Technology Bhopal, India
+        </div>
+
+        <div style="color:var(--light-text);">
+            2022 – Present
+        </div>
+    </div>
+
+    <p style="margin-top:12px;">
+        <strong>Advisor:</strong> Dr. Manoj Arya and Dr. Narendra Gajbhiye<br>
+        <strong>Thesis Title:</strong> “Numerical Investigations of Magnetohydrodynamic Flow and Heat Transfer in Channels”
+    </p>
+</div>
 
             <div id="responsibility">
                 <h2>Leadership & Service</h2>
